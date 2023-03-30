@@ -91,6 +91,7 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    hijri (0.6.0)
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
@@ -131,8 +132,6 @@ GEM
       net-protocol
     nio4r (2.5.8)
     nokogiri (1.14.2-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.14.2-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.6)
     public_suffix (5.0.1)
@@ -203,8 +202,6 @@ GEM
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.25-x86_64-darwin)
       railties (>= 6.0.0)
-    tailwindcss-rails (2.0.25-x86_64-linux)
-      railties (>= 6.0.0)
     thor (1.2.1)
     tilt (2.1.0)
     timeout (0.3.2)
@@ -233,12 +230,12 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
-  x86_64-linux
 
 DEPENDENCIES
   bootsnap
   capybara
   debug
+  hijri
   httparty
   importmap-rails
   jbuilder
@@ -258,7 +255,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.0.0p0
 
 BUNDLED WITH
    2.4.8
