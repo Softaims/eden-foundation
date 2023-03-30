@@ -32,7 +32,7 @@ body {
     bottom: -2px;
     border-radius: 50px;
     left: 0;
-    background-color: #fec265;
+    background-color: #0d521b;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
@@ -53,7 +53,7 @@ body {
 
 .poster-1 {
   background-image: url(zakaat-appeal.jpeg);
-  height: 550px;
+  height: 630px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -61,7 +61,7 @@ body {
 
 .poster-2 {
   background-image: url(poster-2.jpg);
-  height: 550px;
+  height: 630px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -69,7 +69,7 @@ body {
 
 .poster-3 {
   background-image: url(poster-3.jpg);
-  height: 550px;
+  height: 630px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -77,7 +77,7 @@ body {
 
 .poster-4 {
   background-image: url(poster-4.jpg);
-  height: 550px;
+  height: 630px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -89,7 +89,7 @@ body {
 
 .slick-dots {
   position: absolute;
-  bottom: 50px;
+  bottom: -35px;
 }
 
 .slick-dots li button:before {
@@ -97,29 +97,16 @@ body {
 }
 
 .slick-dots li:hover button:before {
-  color: #1ea69a;
+  color: #222;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #fff;
+  color: #222;
   opacity: 100% !important;
 }
 
-.symbol-card:hover {
-  color: #fff !important;
-  transition: 0.3s ease-in-out;
-}
-
-.symbol-card:hover p {
-  color: #fff !important;
-}
-
-.symbol-card:hover h4 {
-  color: #fff !important;
-}
-
 .symbol-card:first-child {
-  background-color: #1ea69a;
+  background-color: #0d521b;
   color: #fff !important;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -132,20 +119,12 @@ body {
   color: #fff !important;
 }
 
-.symbol-card:hover {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
 .fa-clock {
-  color: #1ea69a;
-}
-
-.salah-calander-row:first-child {
-  background-color: #1ea69a !important;
+  color: #0d521b;
 }
 
 .salah-calander-row:hover {
-  background-color: #1ea69a;
+  background-color: #0d521b;
   color: #fff;
   transition: 0.3s ease-in-out;
 }
@@ -184,7 +163,7 @@ body {
 }
 
 .tab-button.active {
-  background-color: #1ea69a;
+  background-color: #0d521b;
   transition: 0.3s ease-in-out;
 }
 
@@ -201,7 +180,7 @@ body {
 }
 
 .tab-button.active .date-time {
-  background-color: #fec265;
+  background-color: #5b8c2f;
 }
 
 #tab-button-1 {
@@ -278,10 +257,57 @@ body {
       margin-inline: auto;
     }
   }
+
+  .poster-1 {
+    height: 550px;
+  }
+
+  .poster-2 {
+    height: 550px;
+  }
+
+  .poster-3 {
+    height: 550px;
+  }
+
+  .poster-4 {
+    height: 550px;
+  }
 }
 
 @media (min-width: 525px) {
-  .slick-posters {
-    display: none !important;
+  .slick-prev,
+  .slick-next {
+    display: block;
+  }
+
+  .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .symbol-card:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .symbol-card:hover {
+    color: #fff !important;
+    transition: 0.3s ease-in-out;
+  }
+
+  .symbol-card:hover p {
+    color: #fff !important;
+  }
+
+  .symbol-card:hover h4 {
+    color: #fff !important;
+  }
+
+  .symbol-card:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 }
