@@ -3,8 +3,8 @@
   <div class="container mx-auto p-3 md:p-0">
     <div class="flex items-center justify-between py-4">
       <div class="logo w-24">
-        <%= link_to root_path, onclick: 'refreshHomePage();' do %>
-          <%= image_tag("eden-logo", loading: "lazy" , class: "w-full object-contain" ) %>
+        <%= link_to root_path, data: {turbo: "false"} do %>
+          <%= image_tag("eden-logo.png", loading: "lazy" , class: "w-full object-contain" ) %>
             <% end %>
       </div>
       <div class="hadith-text text-white text-sm">
@@ -18,9 +18,3 @@
     </div>
   </div>
 </div>
-
-<script>
-  function refreshHomePage() {
-    window.location.href = '/';
-  }
-</script>
