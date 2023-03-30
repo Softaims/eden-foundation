@@ -1,0 +1,271 @@
+<div class="main-layout">
+  <!-- Mobile only section -->
+  <section class="slick-posters">
+    <a href="https://www.theedenfoundation.org.uk/Donate/Index" class="poster-btn" data-turbo="false">
+      <div class="poster-3"></div>
+    </a>
+    <a href="https://www.theedenfoundation.org.uk/Donate/Index" class="poster-btn" data-turbo="false">
+      <div class="poster-4"></div>
+    </a>
+    <a href="https://www.theedenfoundation.org.uk/Donate/Index" class="poster-btn" data-turbo="false">
+      <div class="poster-1"></div>
+    </a>
+    <a href="https://www.theedenfoundation.org.uk/Donate/Index" data-turbo="false">
+      <div class="poster-2"></div>
+    </a>
+  </section>
+
+  <!-- destop only section -->
+  <section class="banner-background items-center hidden md:flex">
+    <div class="container mx-auto">
+      <div class="banner-text">
+        <div
+          class="bg-primary banner-text-highlight bg-opacity-20 rounded text-xs md:text-sm flex items-center gap-2 p-2 text-black text-opacity-70 md:w-max">
+          <%= image_tag("map-pin.svg", loading: "lazy" , class: "h-4, w-4" ) %>
+            <p>Eden Islamic Center, Huddersfield, United Kingdom</p>
+        </div>
+        <div class="md:w-[500px]">
+          <h1 class="text-xl md:text-3xl lg:text-5xl font-extrabold lg:leading-[50px] my-5 text-black text-opacity-80">
+            A
+            reliable Islamic Center to
+            Follow the
+            Qur'an and
+            Sunnah
+          </h1>
+          <p class="md:text-black md:text-opacity-70 text-sm md:text-base">The salat is the time when the meeting
+            with
+            Allah
+            and the ascension of
+            the believer takes place.</p>
+          <button id="donate-btn" type="button"
+            class="bg-secondary px-14 py-3 md:py-4 rounded text-white inline-block mt-8 hover:bg-secondaryHover transition-all duration-300 hover:scale-105"
+            title="donate button">Donate</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- symbols cards section -->
+  <section class="symbols-section mt-12 lg:mt-24">
+    <div class="container mx-auto p-3 md:p-0">
+      <div class="main-heading md:w-1/2 md:mx-auto text-center">
+        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-black text-opacity-80">Different Programs at Eden
+          Masjid & Islamic Resarch center</h2>
+      </div>
+      <div class="grid-wrapper grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 mt-10 md:mt-20">
+        <% symbols_data.each do |symbol| %>
+          <div
+            class="card symbol-card p-6 text-center flex justify-center items-center flex-col gap-5 bg-[#F0F4F7] rounded cursor-pointer hover:bg-primary hover:scale-105 hover:text-white transition-all">
+            <div class="img-wrapper h-16 w-16">
+              <%= image_tag(symbol[:icon], alt: symbol[:alt], loading: "lazy" , class: "h-full w-full object-contain" )
+                %>
+            </div>
+            <h4 class="font-semibold text-lg text-black text-opacity-80">
+              <%= symbol[:subHeading] %>
+            </h4>
+            <p class="text-black text-opacity-70 text-sm md:text-base">
+              <%= symbol[:description] %>
+            </p>
+          </div>
+          <% end %>
+      </div>
+    </div>
+  </section>
+
+  <!-- events section -->
+  <section class="events-section mt-12 md:mt-16 lg:mt-24">
+    <div class="container mx-auto p-3 md:p-0">
+      <div class="mb-4 md:mb-8">
+        <h2 class="text-lg md:text-2xl lg:text-3xl font-bold text-black text-opacity-80">Upcomming Events</h2>
+      </div>
+
+      <div class="flex md:flex-row flex-col-reverse gap-8 events-tabs">
+        <div class="tab-panels-container md:1/2 lg:w-8/12">
+
+          <% event_tab_panel.each do |e| %>
+            <div id="<%= e[:id] %>" class="flex-1 border rounded p-3 md:px-5 md:py-8 tab-panel">
+              <div class="event-detail lg:flex flex-wrap">
+                <div class="event-description lg:w-1/2 md:py-3 lg:py-0">
+                  <h4 class="text-base md:text-xl font-bold mt-4 text-black text-opacity-80 md:mt-0">
+                    <%= e[:title] %>
+                  </h4>
+                  <p class="mt-4 text-black text-opacity-70 text-sm md:text-base">
+                    <%= e[:date_time] %>
+                  </p>
+                  <p class="mt-4 text-black text-opacity-70 font-light text-sm md:text-base">
+                    <%= e[:description] %>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <% end %>
+        </div>
+
+        <div class="lg:w-4/12 mt-8 md:mt-0">
+          <% event_tab_button.each do |e| %>
+            <div id="<%= e[:id] %>" class="border cursor-pointer rounded p-3 md:p-6 lg:p-3 mt-8 tab-button">
+              <div class="flex gap-5">
+                <div
+                  class="rounded bg-[#F0F4F7] py-2 px-4 text-black text-opacity-70 text-xs md:text-sm self-start date-time">
+                  <span class="whitespace-nowrap date">
+                    <%= e[:date] %>
+                  </span>
+                  <p class="text-xs md:text-sm text-black text-opacity-70">
+                    <%= e[:day] %>
+                  </p>
+                </div>
+                <div>
+                  <h4 class="text-base lg:text-lg font-bold text-black text-opacity-80">
+                    <%= e[:title] %>
+                  </h4>
+                  <p class="text-sm text-black text-opacity-70 tab-button-description">
+                    <%= e[:name_time] %>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- namaz calender section -->
+  <section id="prayer-timetable" class="namaz-calender-section mt-12 md:mt-20 lg:mt-24">
+    <div class="container mx-auto p-3 md:p-0">
+      <div class="md:flex justify-between md:w-[1000px] md-flex mx-auto">
+        <h2
+          class="md:w-[300px] text-xl md:text-2xl lg:text-3xl text-black text-opacity-80 font-bold text-center md:text-left">
+          Eden Masjid Daily
+          Prayers Time</h2>
+        <p
+          class="md:w-1/2 text-black text-opacity-70 text-center text-sm md:text-lg font-light md:text-left mt-4 md:mt-0">
+          The
+          Salat is the time when the meeting with Allah and the ascension of the believer takes place. We all know the
+          importance of this obligatory act, and thus, we do not wish to delve into that area.
+        </p>
+      </div>
+
+      <div class="md:flex gap-8 mt-12 md:mt-16 lg:mt-20">
+        <div class="md:w-[1000px] md-flex mx-auto">
+          <h6 class="md:text-lg font-bold text-black text-opacity-70 text-center md:text-left">
+            <%= Time.now.strftime("%A %B %d, %Y") %>
+              <span class="text-primary">(08 Ramadan 1444)</span>
+          </h6>
+          <div class="mt-5">
+            <div class="rounded border p-4 md:p-6">
+              <div class="rounded p-4 bg-primary">
+                <div class="flex justify-between items-center">
+                  <div class="flex gap-3 items-center">
+                    <div class="bg-white h-5 w-5 rounded-full flex justify-center items-center">
+                      <span class="bg-primary h-2 w-2 rounded-full inline-block"></span>
+                    </div>
+                    <p class="md:text-lg font-semibold text-white">Suhur End</p>
+                  </div>
+                  <p class="md:text-lg font-semibold text-white">4:37 AM</p>
+                </div>
+              </div>
+              <div class="rounded p-4 bg-secondary mt-4">
+                <div class="flex justify-between items-center">
+                  <div class="flex gap-3 items-center">
+                    <div class="bg-white h-5 w-5 rounded-full flex justify-center items-center">
+                      <span class="bg-secondary h-2 w-2 rounded-full inline-block"></span>
+                    </div>
+                    <p class="md:text-lg font-semibold text-white">Sun Rise</p>
+                  </div>
+                  <p class="md:text-lg font-semibold text-white">6:41 AM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded border p-4 md:p-6 mt-5">
+            <div
+              class="salah-heading flex justify-between items-center text-primary font-semibold cursor-pointer rounded border p-4 md:px-6">
+              <p>SALAH</p>
+              <p>START</p>
+              <p>JAMAAT</p>
+            </div>
+
+
+
+
+            <% namaz_timings.each do |namaz| %>
+              <div
+                class="salah-calander-row cursor-pointer rounded border p-4 md:p-6 mt-4 grid grid-cols-3 font-semibold text-sm md:text-base">
+                <div class="salah-type flex items-center gap-2">
+                  <!-- <i class="fa-regular fa-clock"></i> -->
+                  <p class="text-black text-opacity-80">
+                    <%= namaz[:name] %>
+                  </p>
+                </div>
+                <div class="starting-time text-center">
+                  <p class="text-black text-opacity-80">
+                    <%= namaz[:starting_time] %>
+                  </p>
+                </div>
+                <div class="ending-time text-right">
+                  <p class="text-black text-opacity-80">
+                    <%= namaz[:ending_time] %>
+                  </p>
+                </div>
+              </div>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var tabPanels = document.querySelectorAll('.tab-panel');
+    tabPanels[0].classList.add('active');
+
+    var tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons[0].classList.add('active');
+
+    for (var i = 0; i < tabButtons.length; i++) {
+      tabButtons[i].addEventListener('click', function () {
+        var tabButtonId = this.getAttribute('id');
+
+        var tabPanelId = tabButtonId.replace('button', 'panel');
+
+        for (var j = 0; j < tabPanels.length; j++) {
+          if (tabPanels[j].getAttribute('id') === tabPanelId) {
+            tabPanels[j].animate({ opacity: [0, 1], transform: ['scale(0.8)', 'scale(1)'] }, { duration: 500, easing: 'ease-in-out' });
+            tabPanels[j].classList.add('active');
+          } else {
+            tabPanels[j].animate({ opacity: [1, 0], transform: ['scale(1)', 'scale(0.8)'] }, { duration: 500, easing: 'ease-in-out' });
+            tabPanels[j].classList.remove('active');
+          }
+        }
+
+        for (var k = 0; k < tabButtons.length; k++) {
+          if (tabButtons[k].getAttribute('id') === tabButtonId) {
+            tabButtons[k].classList.add('active');
+          } else {
+            tabButtons[k].classList.remove('active');
+          }
+        }
+      });
+    }
+
+    const donateBtn = document.querySelector('#donate-btn');
+    donateBtn.addEventListener('click', () => {
+      window.location = 'https://www.theedenfoundation.org.uk/Donate/Index'
+    })
+
+    $(".slider").not('.slick-initialized').slick()
+
+    $(".slick-posters").not('.slick-initialized').slick({
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 1,
+      autoPlay: true,
+      autoPlaySpeed: 3000,
+    });
+  });
+</script>

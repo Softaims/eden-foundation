@@ -1,0 +1,26 @@
+<!-- Top banner -->
+<div class="bg-primary hidden md:block">
+  <div class="container mx-auto p-3 md:p-0">
+    <div class="flex items-center justify-between py-4">
+      <div class="logo w-24">
+        <%= link_to root_path, onclick: 'refreshHomePage();' do %>
+          <%= image_tag("eden-logo", loading: "lazy" , class: "w-full object-contain" ) %>
+            <% end %>
+      </div>
+      <div class="hadith-text text-white text-sm">
+        <blockquote>
+          “The most beloved of people to Allāh are those who are most beneficial to others."
+        </blockquote>
+        <div class="flex justify-end">
+          <p>-Bukhari</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function refreshHomePage() {
+    window.location.href = '/';
+  }
+</script>

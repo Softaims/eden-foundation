@@ -1,0 +1,46 @@
+<!-- Header navbar -->
+<header id="header" class="md:bg-white bg-primary h-16 md:h-20 shadow-md relative" data-controller="navbar">
+  <div class="container mx-auto px-4 md:px-0">
+    <nav class="flex items-center justify-between h-16 md:h-20">
+      <div class="logo w-24 md:hidden">
+        <%= link_to root_path, onclick: 'refreshHomePage();' do %>
+          <%= image_tag("eden-logo", loading: "lazy" , class: "w-full object-contain" ) %>
+            <% end %>
+      </div>
+      <div class="md:flex justify-between flex-1 absolute md:static w-full top-full z-10 nav-elements"
+        data-navbar-target="navElements">
+        <ul class="md:flex items-center">
+          <li class="nav-link">
+            <a href="<%= root_path %>" data-turbo="false"
+              class="text-sm lg:text-base text-primary hover:text-secondary transition-all duration-300 animated-link">Home</a>
+          </li>
+          <li class="nav-link md:pl-7">
+            <a href="" data-turbo="false"
+              class="text-sm lg:text-base text-primary hover:text-secondary transition-all duration-300 animated-link">About
+              Us</a>
+          </li>
+          <li class="nav-link md:pl-7"><a href="" data-turbo="false"
+              class="text-sm lg:text-base text-primary hover:text-secondary transition-all duration-300 animated-link">Our
+              Centers</a></li>
+          <li class="nav-link md:pl-7"><a href="#prayer-timetable" data-turbo="false"
+              class="text-sm lg:text-base text-primary hover:text-secondary transition-all duration-300 animated-link">Prayer
+              Timetable</a></li>
+          <li class="nav-link md:pl-7"><a href="#" data-turbo="false"
+              class="text-sm lg:text-base text-primary hover:text-secondary transition-all duration-300 animated-link">Contact</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.theedenfoundation.org.uk/Donate/Index" data-turbo="false"
+            class="bg-primary px-8 py-3 rounded text-white inline-block hover:bg-primaryHover transition-all duration-300 hover:scale-105 donate-btn"
+            title="donate-btn">Donate</a>
+        </div>
+      </div>
+      <div class="hamburger-menu cursor-pointer block md:hidden" data-navbar-target="hamButton"
+        data-action="navbar#hamburgerBtn">
+        <div class="bar bar-1 bg-white w-8 h-[3px] rounded-full"></div>
+        <div class="bar bar-2 bg-white w-8 h-[3px] rounded-full mt-1"></div>
+        <div class="bar bar-3 bg-white w-8 h-[3px] rounded-full mt-1"></div>
+      </div>
+    </nav>
+  </div>
+</header>

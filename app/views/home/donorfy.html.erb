@@ -1,0 +1,113 @@
+<section id="donorfy">
+  <div class="container mx-auto">
+    <p class="mt-8 text-black text-opacity-70 text-lg font-light">You can set up a monthly direct debit. We use
+      GoCardless to collect the monthly donation.</p>
+    <h2 class="mt-4 text-3xl font-semibold text-primary">Setup Monthly Donation</h2>
+    <form id="donorfy-form">
+      <div class="grid grid-cols-[40%_40%] mt-8">
+        <div class="group-input">
+          <label for="first-name" class="text-black text-opacity-70 block mb-2">First Name</label>
+          <input type="text" id="first-name" placeholder="Enter First Name"
+            class="rounded focus:ring-primary focus:border-primary text-black text-opacity-70 w-4/5">
+        </div>
+        <div class="group-input">
+          <label for="last-name" class="text-black text-opacity-70 block mb-2">Last Name</label>
+          <input type="text" id="last-name" placeholder="Enter Last Name"
+            class="rounded focus:ring-primary focus:border-primary text-black text-opacity-70 w-4/5">
+        </div>
+        <div class="group-input mt-6">
+          <label for="address-line-1" class="text-black text-opacity-70 block mb-2">Address Line 1</label>
+          <input type="text" id="address-line-1" placeholder="Enter Address Line 1"
+            class="rounded focus:ring-primary focus:border-primary text-black text-opacity-70 w-4/5">
+        </div>
+        <div class="group-input mt-6">
+          <label for="address-line-2" class="text-black text-opacity-70 block mb-2">Address Line 2</label>
+          <input type="text" id="address-line-2" placeholder="Enter Address Line 2"
+            class="rounded focus:ring-primary focus:border-primary text-black text-opacity-70 w-4/5">
+        </div>
+        <div class="group-input mt-6">
+          <label for="town" class="text-black text-opacity-70 block mb-2">Town</label>
+          <input type="text" id="town" placeholder="Enter Town"
+            class="rounded focus:ring-primary focus:border-primary text-black text-opacity-70 w-4/5">
+        </div>
+        <div class="group-input mt-6">
+          <label for="country" class="text-black text-opacity-70 block mb-2">Country</label>
+          <input type="text" id="country" placeholder="Enter Country"
+            class="rounded focus:ring-primary focus:border-primary text-black text-opacity-70 w-4/5">
+        </div>
+        <div class="group-input mt-6">
+          <label for="postcode" class="text-black text-opacity-70 block mb-2">Postcode</label>
+          <input type="text" id="postcode" placeholder="Enter Postcode"
+            class="rounded focus:ring-primary focus:border-primary text-black text-opacity-70 w-4/5"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+        </div>
+        <div class="group-input mt-6">
+          <label for="mobile-number" class="text-black text-opacity-70 block mb-2">Mobile Number</label>
+          <input type="text" id="mobile-number" placeholder="Enter Mobile Number"
+            class="rounded focus:ring-primary focus:border-primary text-black text-opacity-70 w-4/5"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+        </div>
+        <div class="group-input mt-6">
+          <label for="email" class="text-black text-opacity-70 block mb-2">Email</label>
+          <input type="email" id="email" placeholder="Enter Email Address"
+            class="rounded focus:ring-primary focus:border-primary text-black text-opacity-70 w-4/5">
+        </div>
+      </div>
+
+      <div class="select-monthly-amount mt-8">
+        <label for="select-amount" class="text-lg text-black text-opacity-70 font-light">Select the monthly amount you
+          would like to donate or insert your own</label>
+        <div class="btn-group flex items-center gap-4 mt-4">
+          <button type="button" onclick="setMonthlyAmount(5)"
+            class="text-black text-opacity-70 rounded px-4 py-2 border border-primary cursor-pointer">£5</button>
+          <button type="button" onclick="setMonthlyAmount(10)"
+            class="text-black text-opacity-70 rounded px-4 py-2 border border-primary cursor-pointer">£10</button>
+          <button type="button" onclick="setMonthlyAmount(20)"
+            class="text-black text-opacity-70 rounded px-4 py-2 border border-primary cursor-pointer">£20</button>
+          <button type="button" onclick="setMonthlyAmount(30)"
+            class="text-black text-opacity-70 rounded px-4 py-2 border border-primary cursor-pointer">£30</button>
+        </div>
+        <div class="flex gap-4 items-center mt-4">
+          <span class="text-black text-opacity-70 rounded px-4 py-2 border border-primary cursor-pointer">£</span>
+          <input type="text" id="select-amount"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+            class="rounded focus:ring-primary focus:border-primary text-black text-opacity-70 w-[223px]">
+        </div>
+      </div>
+
+      <div class="checkboxes-wrapper mt-10">
+        <div class="flex items-center gap-4">
+          <label for="gift-aid" class="text-black text-opacity-70 cursor-pointer">Yes I would like you to claim Gift Aid
+            on my donation (remember this does not cost you a
+            penny)</label>
+          <input type="checkbox" name="gift-aid" id="gift-aid" class="accent-pink-500 cursor-pointer rounded h-5 w-5">
+        </div>
+        <p class="text-black text-opacity-70 font-light mt-4">
+          I want all donations I've made to you in the past four years and all donations in future to be treated as Gift
+          Aid
+          donations until I notify you otherwise. To qualify for Gift Aid, what you pay in income or capital gains tax
+          must at
+          least equal the amount claimed by all charities and CASCs in the tax year from HMRC. We will claim 25p on
+          every £1 you
+          donate.
+        </p>
+        <div class="flex items-center gap-4 mt-4">
+          <label for="subscribe" class="text-black text-opacity-70 cursor-pointer">Yes I would like to be kept up to
+            date
+            with your projects and activities by email - we will not share your details and
+            you can unsubscribe at any time</label>
+          <input type="checkbox" name="subscribe" id="subscribe" class="accent-pink-500 cursor-pointer rounded h-5 w-5">
+        </div>
+      </div>
+
+      <button class="mt-6 bg-primary px-8 py-3 rounded text-white">Setup Monthly Payment</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  function setMonthlyAmount(amount) {
+    document.getElementById('select-amount').value = amount;
+  }
+
+</script>
