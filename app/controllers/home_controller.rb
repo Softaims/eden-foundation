@@ -1,47 +1,55 @@
 require 'roo'
 require 'httparty'
 require 'csv'
+require 'hijri'
 
 class HomeController < ApplicationController
   def index
-    # fajr_timing = []
-    # zhur_timing = []
-    # asr_timing = []
-    # maghrib_timing = []
-    # isha_timing = []
+    hijri_date = Hijri::Date.today
+    month_name = Hijri::Date::MONTHNAMES[hijri_date.month]
+    hijri_date_str = "#{hijri_date.day} #{month_name} #{hijri_date.year}"
+    @hijri_current_date = hijri_date_str
 
-    # CSV.foreach('public/csv-files/Ramadhan-file.csv', headers: true).with_index do |row, index|
-    #   next if index < 14
+    current_date = Date.today.strftime("%d/%m")
+    # current_date = Time.now.in_time_zone('London').strftime('%d/%m')
+    row_found = false
+    csv = CSV.read('public/csv-files/Ramadhan-file.csv', headers: true)
+    csv.each_with_index do |row, index|
 
-    #   fajr_start = row[4]
-    #   zhur_start = row[6]
-    #   asr_start = row[7]
-    #   maghrib_start = row[8]
-    #   isha_start = row[9]
+      row_values = row.fields
 
-    #   fajr_end = row[10]
-    #   zhur_end = row[11]
-    #   asr_end = row[11]
-    #   maghrib_end = row[13]
-    #   isha_end = row[12]
+      if row_values[1] == current_date
+        row_found = true
+        @suhur_end = row_values[3]
+        @fajr_start = row_values[4]
+        @sunrise = row_values[5]
+        @zuhr_start = row_values[6]
+        @asr_start = row_values[7]
+        @maghrib_start = row_values[8]
+        @isha_start = row_values[9]
+        @fajr_end = row_values[10]
+        @asr_end = row_values[11]
+        @isha_end = row_values[12]
+        @maghrib_end = row_values[13]
+        break
+      end
+    end
 
-    #   @fajr_start = fajr_start
-    #   @zhur_start = zhur_start
-    #   @asr_start = asr_start
-    #   @maghrib_start = maghrib_start
-    #   @isha_start = isha_start
+    unless row_found
+      last_row = csv[-1]
+      @suhur_end = last_row[3]
+      @fajr_start = last_row[4]
+      @sunrise = last_row[5]
+      @zuhr_start = last_row[6]
+      @asr_start = last_row[7]
+      @maghrib_start = last_row[8]
+      @isha_start = last_row[9]
+      @fajr_end = last_row[10]
+      @asr_end = last_row[11]
+      @isha_end = last_row[12]
+      @maghrib_end = last_row[13]
+    end
 
-    #   fajr_namaz = {
-    #     fajr_start: row[4],
-    #     fajr_end = row[10]
-    #   }
-
-    #   fajr_timing << fajr_namaz
-
-    #   break
-    # end
-
-    # @namaz_timings = fajr_timing
   end
 
   def donate

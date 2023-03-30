@@ -3,8 +3,8 @@
   <div class="container mx-auto px-4 md:px-0">
     <nav class="flex items-center justify-between h-16 md:h-20">
       <div class="logo w-24 md:hidden">
-        <%= link_to root_path, data: {turbo: "false"} do %>
-          <%= image_tag("eden-logo.png", loading: "lazy" , class: "w-full object-contain" ) %>
+        <%= link_to root_path, onclick: 'refreshHomePage();' do %>
+          <%= image_tag("eden-logo", loading: "lazy" , class: "w-full object-contain" ) %>
             <% end %>
       </div>
       <div class="md:flex justify-between flex-1 absolute md:static w-full top-full z-10 nav-elements"
@@ -12,21 +12,21 @@
         <ul class="md:flex items-center">
           <li class="nav-link">
             <a href="<%= root_path %>" data-turbo="false"
-              class="text-sm lg:text-base text-primary hover:text-secondary transition-all duration-300 animated-link">Home</a>
+              class="text-sm lg:text-base text-black text-opacity-70 hover:text-primary transition-all duration-300 animated-link">Home</a>
           </li>
           <li class="nav-link md:pl-7">
-            <a href="#" data-turbo="false"
-              class="text-sm lg:text-base text-primary hover:text-secondary transition-all duration-300 animated-link">About
+            <a href="#about-us" data-turbo="false"
+              class="text-sm lg:text-base text-black text-opacity-70 hover:text-primary transition-all duration-300 animated-link">About
               Us</a>
           </li>
-          <li class="nav-link md:pl-7"><a href="#" data-turbo="false"
-              class="text-sm lg:text-base text-primary hover:text-secondary transition-all duration-300 animated-link">Our
+          <li class="nav-link md:pl-7"><a href="" data-turbo="false"
+              class="text-sm lg:text-base text-black text-opacity-70 hover:text-primary transition-all duration-300 animated-link">Our
               Centers</a></li>
           <li class="nav-link md:pl-7"><a href="#prayer-timetable" data-turbo="false"
-              class="text-sm lg:text-base text-primary hover:text-secondary transition-all duration-300 animated-link">Prayer
+              class="text-sm lg:text-base text-black text-opacity-70 hover:text-primary transition-all duration-300 animated-link">Prayer
               Timetable</a></li>
           <li class="nav-link md:pl-7"><a href="#" data-turbo="false"
-              class="text-sm lg:text-base text-primary hover:text-secondary transition-all duration-300 animated-link">Contact</a>
+              class="text-sm lg:text-base text-black text-opacity-70 hover:text-primary transition-all duration-300 animated-link">Contact</a>
           </li>
         </ul>
         <div>

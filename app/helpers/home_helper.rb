@@ -34,6 +34,14 @@ module HomeHelper
         alt: 'perpetuity icon',
         subHeading: 'Perpetuity',
         description: 'Building resilience and endurance using Sustainable Enterprise Models. We secure resources, services and assets that endure and bring longevity in delivering our Vision.'
+      },
+
+       {
+        icon: 'about-us.png',
+        alt: 'about us icon',
+        id: 'about-us',
+        subHeading: 'About Us',
+        description: 'We are a registered charity established by the Muslim community of Huddersfield. Our Vision is to inculcate sound Islamic faith & practice to realise our human potential.  -  Caption'
       }
 
     ]
