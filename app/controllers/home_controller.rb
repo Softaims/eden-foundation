@@ -10,8 +10,8 @@ class HomeController < ApplicationController
     hijri_date_str = "#{hijri_date.day} #{month_name} #{hijri_date.year}"
     @hijri_current_date = hijri_date_str
 
-    current_date = Date.today.strftime("%d/%m")
-    # current_date = Time.now.in_time_zone('London').strftime('%d/%m')
+    # current_date = Date.today.strftime("%d/%m")
+    current_date = Time.now.in_time_zone('London').strftime('%d/%m')
     row_found = false
     csv = CSV.read('public/csv-files/Ramadhan-file.csv', headers: true)
     csv.each_with_index do |row, index|
