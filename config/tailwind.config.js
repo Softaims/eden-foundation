@@ -9,10 +9,8 @@ module.exports = {
       },
 
       colors: {
-        primary: "#1EA69A",
-        secondary: "#FEC265",
-        primaryHover: "#17837a",
-        secondaryHover: "#eeaf52",
+        primary: "#0d521b",
+        primaryHover: "#146725",
       },
     },
   },
