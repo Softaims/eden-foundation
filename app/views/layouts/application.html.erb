@@ -20,12 +20,10 @@
 
   <body>
     <%= render 'shared/top_banner' %>
-    <%= render 'shared/header' %>
+    <%= render 'shared/header' unless @disable_header %>
     <main>
       <%= yield %>
     </main>
-    <%= render 'shared/footer' %>
-    <script src="https://pi-test.sagepay.com/api/v1/js/sagepay.js"></script>
-    <script src="https://pi-test.opayo.co.uk/api/v1/js/sagepay.js"></script>
+    <%= render 'shared/footer'  unless @disable_footer %>
   </body>
 </html>

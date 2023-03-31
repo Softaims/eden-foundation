@@ -11,6 +11,8 @@ module.exports = {
       colors: {
         primary: "#0d521b",
         primaryHover: "#146725",
+        bgSecondary: "#FFDD01",
+        secondaryHover: "#f1d623",
       },
     },
   },

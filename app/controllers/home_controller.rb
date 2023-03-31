@@ -10,7 +10,6 @@ class HomeController < ApplicationController
     hijri_date_str = "#{hijri_date.day} #{month_name} #{hijri_date.year}"
     @hijri_current_date = hijri_date_str
 
-    # current_date = Date.today.strftime("%d/%m")
     current_date = Time.now.in_time_zone('London').strftime('%d/%m')
     row_found = false
     csv = CSV.read('public/csv-files/Ramadhan-file.csv', headers: true)
@@ -76,5 +75,25 @@ class HomeController < ApplicationController
   end
 
   def donorfy
+  end
+
+  def our_centers
+    @disable_footer = true
+  end
+
+  def contact
+    @disable_footer = true
+  end
+
+  def prayer_timetable
+    @disable_header = true
+    @disable_footer = true
+
+    send_file(
+      "#{Rails.root}/public/namaz-calendar.pdf",
+      filename: "namaz-calendar.pdf",
+      type: "application/pdf",
+      disposition: "inline"
+    )
   end
 end

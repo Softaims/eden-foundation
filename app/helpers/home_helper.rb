@@ -36,14 +36,6 @@ module HomeHelper
         description: 'Building resilience and endurance using Sustainable Enterprise Models. We secure resources, services and assets that endure and bring longevity in delivering our Vision.'
       },
 
-       {
-        icon: 'about-us.png',
-        alt: 'about us icon',
-        id: 'about-us',
-        subHeading: 'About Us',
-        description: 'We are a registered charity established by the Muslim community of Huddersfield. Our Vision is to inculcate sound Islamic faith & practice to realise our human potential.  -  Caption'
-      }
-
     ]
   end
 
@@ -87,17 +79,15 @@ module HomeHelper
         id: 'tab-panel-1',
         image: 'ramadhan-byan.jpg',
         alt: 'ramadhan byan',
-        title: 'Saturday Ramadhan Bayaan | The Eden Foundation Hall',
-        date_time: '23 March 2023 | 7:00 PM',
+        title: 'Saturday Ramadhan Bayaan - 19:00',
         description: 'Join us for an evening of spiritual reflection and inspiration at TheEdenFoundation Hall, as renowned Islamic scholar Sheikh Ali Al-Husseini delivers a powerful Ramadhan Bayaan on the topic of forgiveness'
       },
 
       {
         id: 'tab-panel-2',
         image: 'ramadhan-byan.jpg',
-        alt: 'kids ramadhan show',
-        title: 'Kids Ramadhan Show | The Eden Foundation Hall',
-        date_time: '23 March 2023 | 7:00 PM',
+        alt: 'Kids ramadhan show',
+        title: 'Ramadhan Show 2nd April - 18:00',
         description: 'Dont miss out on the fun and excitement of our Kids Ramadhan Show at The Eden Foundation Hall. Bring your children along for an evening of entertainment and education as they learn about the importance of Ramadhan in a fun and engaging way'
       },
 
@@ -105,19 +95,9 @@ module HomeHelper
         id: 'tab-panel-3',
         image: 'ramadhan-byan.jpg',
         alt: 'unity iftaar',
-        title: 'Unity Iftaar | The Eden Foundation Hall',
-        date_time: '23 March 2023 | 7:00 PM',
+        title: 'Unity Iftaar 2nd April - 18:30',
         description: 'Join us for an iftaar meal at The Eden Foundation Hall as we come together in the spirit of unity and brotherhood during the holy month of Ramadhan. Enjoy a delicious meal and connect with fellow members of the community.'
       },
-
-      {
-        id: 'tab-panel-4',
-        image: 'ramadhan-byan.jpg',
-        alt: 'snowdon walk',
-        title: 'Snowdon walk | The Eden Foundation Hall',
-        date_time: '23 March 2023 | 7:00 PM',
-        description: 'Lace up your hiking boots and join us for a breathtaking trek up Snowdon, the highest mountain in Wales. Take in the stunning views and enjoy the fresh mountain air as we embark on this unforgettable journey together'
-      }
     ]
   end
 
@@ -126,33 +106,25 @@ module HomeHelper
       {
         id: 'tab-button-1',
         title: 'Saturday Ramadhan Bayaan',
-        date: 'March 23',
-        day: 'Friday',
-        name_time: 'The Eden Foundation Hall | 7:00 PM'
+        date: '1st April',
+        day: 'Saturday',
+        name_time: 'Time | 19:00'
       },
 
       {
         id: 'tab-button-2',
         title: 'Kids Ramadhan Show',
-        date: 'March 27',
-        day: 'Tuesday',
-        name_time: 'Abdullah Bin Razaak | 8:00 PM'
+        date: '2nd April',
+        day: 'Sunday',
+        name_time: 'Time | 18:00'
       },
 
       {
         id: 'tab-button-3',
         title: 'Unity Iftaar',
-        date: 'March 31',
-        day: 'Friday',
-        name_time: 'Huddersfield, United Kindom | 10:00 PM'
-      },
-
-      {
-        id: 'tab-button-4',
-        title: 'Snowdon walk',
-        date: 'March 31',
-        day: 'Friday',
-        name_time: 'Huddersfield, United Kindom | 10:00 PM'
+        date: '2nd April',
+        day: 'Sunday',
+        name_time: 'Time | 18:30'
       }
     ]
   end
