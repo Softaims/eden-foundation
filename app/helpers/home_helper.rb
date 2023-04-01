@@ -4,7 +4,7 @@ module HomeHelper
       {
         icon: 'insepire-yellow.png',
         alt: 'inspire icon',
-        subHeading: 'Insipre',
+        subHeading: 'Inspire',
         description: 'Inspired, inspiring others with Faith In Islam. We take from pristine sources of faith, embody and invite others.'
       },
 
@@ -80,7 +80,7 @@ module HomeHelper
         image: 'ramadhan-byan.jpg',
         alt: 'ramadhan byan',
         title: 'Saturday Ramadhan Bayaan - 19:00',
-        description: 'Join us for an evening of spiritual reflection and inspiration at TheEdenFoundation Hall, as renowned Islamic scholar Sheikh Ali Al-Husseini delivers a powerful Ramadhan Bayaan on the topic of forgiveness'
+        description: 'Join us for an evening of spiritual reflection and inspiration at The Eden Center - Highfields, with our very own local Islamic scholars'
       },
 
       {

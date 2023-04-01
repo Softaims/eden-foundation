@@ -107,20 +107,6 @@ body {
   transition: all ease 0.3s;
 }
 
-.symbol-card:first-child {
-  background-color: #0d521b;
-  color: #fff !important;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.symbol-card:first-child p {
-  color: #fff !important;
-}
-
-.symbol-card:first-child h4 {
-  color: #fff !important;
-}
-
 .fa-clock {
   color: #0d521b;
 }
@@ -226,6 +212,10 @@ body {
     overflow-x: hidden;
   }
 
+  .slick-posters-desktop {
+    display: none;
+  }
+
   #contact-page,
   #our-centers-page {
     background-position: center;
@@ -315,11 +305,11 @@ body {
   }
 }
 
-// @media (min-width: 525px) {
-//   .slick-initialized {
-//     overflow: hidden !important;
-//   }
-// }
+@media (min-width: 525px) {
+  .slick-wrapper-mobile {
+    display: none;
+  }
+}
 
 @media (min-width: 768px) {
   .symbol-card:hover {
@@ -341,5 +331,17 @@ body {
 
   .symbol-card:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}
+
+@media (min-width: 821px) {
+  .symbols-mobile-section {
+    display: none;
+  }
+}
+
+@media (max-width: 821px) {
+  .symbols-desktop-section {
+    display: none;
   }
 }
