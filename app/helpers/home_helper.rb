@@ -80,7 +80,7 @@ module HomeHelper
         image: 'ramadhan-byan.jpg',
         alt: 'ramadhan byan',
         title: 'Saturday Ramadhan Bayaan - 19:00',
-        description: 'Join us for an evening of spiritual reflection and inspiration at The Eden Center - Highfields, with our very own local Islamic scholars'
+        description: 'Join us for an evening of spiritual reflection and inspiration at The Eden Center - Highfields, with our very own local Islamic scholars.'
       },
 
       {
@@ -88,7 +88,7 @@ module HomeHelper
         image: 'ramadhan-byan.jpg',
         alt: 'Kids ramadhan show',
         title: 'Ramadhan Show 2nd April - 18:00',
-        description: 'Dont miss out on the fun and excitement of our Kids Ramadhan Show at The Eden Foundation Hall. Bring your children along for an evening of entertainment and education as they learn about the importance of Ramadhan in a fun and engaging way'
+        description: 'Dont miss out on the fun and excitement of our Kids Ramadhan Show. Listen Via Mixlr broadcast as they learn about the importance of Ramadhan in a fun and engaging way.'
       },
 
       {
@@ -96,7 +96,7 @@ module HomeHelper
         image: 'ramadhan-byan.jpg',
         alt: 'unity iftaar',
         title: 'Unity Iftaar 2nd April - 18:30',
-        description: 'Join us for an iftaar meal at The Eden Foundation Hall as we come together in the spirit of unity and brotherhood during the holy month of Ramadhan. Enjoy a delicious meal and connect with fellow members of the community.'
+        description: 'Join us for an iftaar meal at St Georges Square from 6:30pm onwards as we come together in the spirit of unity and brotherhood during the holy month of Ramadhan. Break fast with local members of Muslim Community.'
       },
     ]
   end
