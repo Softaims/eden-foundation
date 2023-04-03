@@ -66,7 +66,13 @@
   </section>
 
   <!-- namaz calender section on mobile -->
-  <section id="prayer-timetable-mobile" class="namaz-calender-section mt-6 md:mt-20 lg:mt-24 md:hidden">
+  <div class="container mx-auto p-3">
+    <button class="show-salahtimetable-btn border-none outline-none w-full bg-primary text-white py-4 px-6 rounded mt-1"
+      data-turbo="false">
+      Click to see Salah Timetable
+    </button>
+  </div>
+  <section id="prayer-timetable-mobile" class="namaz-calender-section mt-6 md:mt-20 lg:mt-24 namaz md:hidden">
     <div class="container mx-auto p-3 md:p-0">
       <div class="md:flex justify-between md:w-[1000px] md-flex mx-auto mt-4">
         <h2
@@ -264,8 +270,8 @@
       <div class="main-heading md:w-1/2 md:mx-auto text-center">
         <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-black text-opacity-80">About Us</h2>
         <p class="text-sm md:text-base text-black text-opacity-70 mt-4">We are a registered charity established by the
-          Muslim community of Huddersfield. Our Vision is to inculcate sound Islamic faith & practice to realise our
-          Human potential.</p>
+          Muslim community of Huddersfield. Our Vision is to promote sound Islamic faith & practice to unlock our
+          Human potential through provision of education & welfare initiatives.</p>
       </div>
       <!-- Mobile and tablet view -->
       <div class="symbols-mobile-section">
@@ -646,6 +652,20 @@
       autoplaySpeed: 3000,
       prevArrow: '<button class="slide-arrow prev-arrow"><span class="fa-solid fa-arrow-left"></span></button>',
       nextArrow: '<button class="slide-arrow next-arrow"><span class="fa-solid fa-arrow-right"></span></button>'
+    });
+
+    const showSalahBtn = document.querySelector('.show-salahtimetable-btn');
+    const namazSection = document.querySelector('.namaz');
+    let isSectionVisible = false;
+
+    showSalahBtn.addEventListener('click', () => {
+      if (!isSectionVisible) {
+        namazSection.style.display = 'block';
+        isSectionVisible = true;
+      } else {
+        namazSection.style.display = 'none';
+        isSectionVisible = false;
+      }
     });
   });
 </script>
