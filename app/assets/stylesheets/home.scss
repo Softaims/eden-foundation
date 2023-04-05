@@ -210,6 +210,34 @@ body {
   display: none;
 }
 
+.poster-1-desktop {
+  background-image: url(lindley-banner-desktop-1.jpg);
+  height: 400px;
+  background-repeat: no-repeat;
+  // background-size: cover;
+}
+
+.poster-2-desktop {
+  background-image: url(zakaat-banner-desktop-2.jpg);
+  height: 400px;
+  background-repeat: no-repeat;
+  // background-size: cover;
+}
+
+.poster-3-desktop {
+  background-image: url(highfield-banner-desktop-3.jpg);
+  height: 400px;
+  background-repeat: no-repeat;
+  // background-size: cover;
+}
+
+.poster-4-desktop {
+  background-image: url(sadaqat-banner-desktop-4.jpg);
+  height: 400px;
+  background-repeat: no-repeat;
+  // background-size: cover;
+}
+
 @media (max-width: 525px) {
   html,
   body {
