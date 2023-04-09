@@ -1,19 +1,19 @@
 <div class="main-layout">
   <!-- Mobile posters section -->
   <section class="slick-wrapper-mobile">
-    <div class="slick-posters-mobile relative">
-      <div class="poster-3 relative">
+    <div class="relative slick-posters-mobile">
+      <div class="relative poster-3">
       </div>
-      <div class="poster-1 relative">
+      <div class="relative poster-1">
       </div>
-      <div class="poster-4 relative">
+      <div class="relative poster-4">
       </div>
-      <div class="poster-2 relative">
+      <div class="relative poster-2">
       </div>
     </div>
-    <div class="container mx-auto p-3">
+    <div class="container p-3 mx-auto">
       <a href="https://www.theedenfoundation.org.uk/Donate/Index"
-        class="poster-btn bg-primary text-white py-4 px-6 rounded mt-2 flex justify-center gap-3 items-center"
+        class="flex items-center justify-center gap-3 px-6 py-4 mt-2 text-white rounded poster-btn bg-primary"
         data-turbo="false">
         <span class="text-white">Donate now</span>
         <%= image_tag('arrow-right.svg') %></i>
@@ -22,96 +22,80 @@
   </section>
 
   <!-- Desktop posters section -->
-  <section class="slick-posters-desktop relative">
-    <div class="poster-1-desktop relative">
-      <div>
-        <a href="https://www.theedenfoundation.org.uk/Donate/Index"
-          class="poster-btn bg-bgSecondary text-whte py-4 px-6 absolute top-[-1px] right-0 flex gap-3 items-center md:hover:bg-secondaryHover transition-all duration-300 md:hover:scale-105"
-          data-turbo="false">
-          <span class="text-white">Donate now</span>
-          <%= image_tag('arrow-right.svg') %></i>
-        </a>
+  <section class="relative slick-posters-desktop">
+    <a href="https://www.theedenfoundation.org.uk/Donate/Index">
+      <div class="poster-1-desktop">
       </div>
-    </div>
-    <div class="poster-2-desktop relative">
-      <div>
-        <a href="https://www.theedenfoundation.org.uk/Donate/Index"
-          class="poster-btn bg-primary absolute top-[-1px] right-0 text-whte py-4 px-6 flex gap-3 items-center md:hover:bg-primaryHover transition-all duration-300 md:hover:scale-105"
-          data-turbo="false">
-          <span class="text-white">Donate now</span>
-          <%= image_tag('arrow-right.svg') %></i>
-        </a>
+    </a>
+    <a href="https://www.theedenfoundation.org.uk/Donate/Index">
+      <div class="poster-2-desktop">
       </div>
-    </div>
-    <div class="poster-3-desktop relative">
-      <div>
-        <a href="https://www.theedenfoundation.org.uk/Donate/Index"
-          class="poster-btn bg-bgSecondary text-whte py-4 px-6 absolute top-[-1px] right-0 flex gap-3 items-center md:hover:bg-secondaryHover transition-all duration-300 md:hover:scale-105"
-          data-turbo="false">
-          <span class="text-white">Donate now</span>
-          <%= image_tag('arrow-right.svg') %></i>
-        </a>
+    </a>
+    <a href="https://www.theedenfoundation.org.uk/Donate/Index">
+      <div class="poster-3-desktop">
       </div>
-    </div>
-    <div class="poster-4-desktop relative">
-      <div>
-        <a href="https://www.theedenfoundation.org.uk/Donate/Index"
-          class="poster-btn bg-primary text-whte py-4 px-6 absolute top-[-1px] right-0 flex gap-3 items-center md:hover:bg-primaryHover transition-all duration-300 md:hover:scale-105"
-          data-turbo="false">
-          <span class="text-white">Donate now</span>
-          <%= image_tag('arrow-right.svg') %></i>
-        </a>
+    </a>
+    <a href="https://www.theedenfoundation.org.uk/Donate/Index">
+      <div class="poster-4-desktop">
       </div>
-    </div>
+    </a>
+    <a href="https://honeybeenursery.org.uk">
+      <div class="relative poster-5-desktop">
+      </div>
+    </a>
+    <a href="https://www.cleverbee.uk">
+      <div class="relative poster-6-desktop">
+      </div>
+    </a>
   </section>
 
   <!-- namaz calender section on mobile -->
-  <div class="container mx-auto p-3 md:hidden">
-    <button class="show-salahtimetable-btn border-none outline-none w-full bg-primary text-white py-4 px-6 rounded mt-1"
+  <div class="container p-3 mx-auto md:hidden">
+    <button class="w-full px-6 py-4 mt-1 text-white border-none rounded outline-none show-salahtimetable-btn bg-primary"
       data-turbo="false">
       Click to see Salah Timetable
     </button>
   </div>
-  <section id="prayer-timetable-mobile" class="namaz-calender-section mt-6 md:mt-20 lg:mt-24 namaz md:hidden">
-    <div class="container mx-auto p-3 md:p-0">
+  <section id="prayer-timetable-mobile" class="mt-6 namaz-calender-section md:mt-20 lg:mt-24 namaz md:hidden">
+    <div class="container p-3 mx-auto md:p-0">
       <div class="md:flex justify-between md:w-[1000px] md-flex mx-auto mt-4">
         <h2
           class="md:w-[300px] text-xl md:text-2xl lg:text-3xl text-black text-opacity-80 font-bold text-center md:text-left">
           TEF Daily Prayer Times</h2>
       </div>
 
-      <div class="md:flex gap-8 mt-5 md:mt-16 lg:mt-20">
+      <div class="gap-8 mt-5 md:flex md:mt-16 lg:mt-20">
         <div class="md:w-[1000px] md-flex mx-auto">
-          <h6 class="md:text-lg font-bold text-black text-opacity-70 text-center md:text-left">
+          <h6 class="font-bold text-center text-black md:text-lg text-opacity-70 md:text-left">
             <%= Time.now.strftime("%A %B %d, %Y") %>
               <span class="text-primary">
                 (<%= @hijri_current_date %>)
               </span>
           </h6>
           <div class="mt-5">
-            <div class="rounded border p-4 md:p-6">
-              <div class="rounded p-4 bg-primary">
-                <div class="flex justify-between items-center">
-                  <div class="flex gap-3 items-center">
-                    <div class="bg-white h-5 w-5 rounded-full flex justify-center items-center">
-                      <span class="bg-primary h-2 w-2 rounded-full inline-block"></span>
+            <div class="p-4 border rounded md:p-6">
+              <div class="p-4 rounded bg-primary">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="flex items-center justify-center w-5 h-5 bg-white rounded-full">
+                      <span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
                     </div>
-                    <p class="md:text-lg font-semibold text-white">Suhur End</p>
+                    <p class="font-semibold text-white md:text-lg">Suhur End</p>
                   </div>
-                  <p class="md:text-lg font-semibold text-white">
+                  <p class="font-semibold text-white md:text-lg">
                     <%= @suhur_end %>
                   </p>
                 </div>
               </div>
-              <div class="rounded p-4 bg-primary mt-4">
-                <div class="flex justify-between items-center">
-                  <div class="flex gap-3 items-center">
-                    <div class="bg-white h-5 w-5 rounded-full flex justify-center items-center">
-                      <span class="bg-primary h-2 w-2 rounded-full inline-block"></span>
+              <div class="p-4 mt-4 rounded bg-primary">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="flex items-center justify-center w-5 h-5 bg-white rounded-full">
+                      <span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
                     </div>
-                    <p class="md:text-lg font-semibold text-white">Sun Rise</p>
+                    <p class="font-semibold text-white md:text-lg">Sun Rise</p>
                   </div>
-                  <p class="md:text-lg font-semibold text-white">
+                  <p class="font-semibold text-white md:text-lg">
                     <%= @sunrise %>
                   </p>
                 </div>
@@ -119,11 +103,11 @@
             </div>
           </div>
 
-          <div class="rounded border p-4 md:p-6 mt-5">
+          <div class="p-4 mt-5 border rounded md:p-6">
             <div
-              class="salah-heading flex justify-between items-center text-primary font-semibold cursor-pointer rounded border p-2 md:px-6">
-              <p class="text-start text-sm font-bold">SALAH</p>
-              <p class="text-center text-sm font-bold">START</p>
+              class="flex items-center justify-between p-2 font-semibold border rounded cursor-pointer salah-heading text-primary md:px-6">
+              <p class="text-sm font-bold text-start">SALAH</p>
+              <p class="text-sm font-bold text-center">START</p>
               <div class="text-center">
                 <p class="text-xs">LINDLEY</p>
                 <p class="text-sm font-bold">JAMAAT</p>
@@ -136,8 +120,8 @@
 
             <div class="namaz-timings-wrapper">
               <div
-                class="salah-calander-row cursor-pointer rounded border p-4 md:p-6 mt-4 grid grid-cols-4 font-semibold text-sm md:text-base">
-                <div class="salah-type flex items-center">
+                class="grid grid-cols-4 p-4 mt-4 text-sm font-semibold border rounded cursor-pointer salah-calander-row md:p-6 md:text-base">
+                <div class="flex items-center salah-type">
                   <p class="text-black text-opacity-80">
                   <h2>Fajr</h2>
                   </p>
@@ -148,19 +132,19 @@
                   </p>
                 </div>
                 <div class="ending-time">
-                  <p class="text-black text-opacity-80 pr-8 text-center">
+                  <p class="pr-8 text-center text-black text-opacity-80">
                     <%= @fajr_end %>
                   </p>
                 </div>
                 <div class="ending-time">
-                  <p class="text-black text-opacity-80 pr-3 text-end">
+                  <p class="pr-3 text-black text-opacity-80 text-end">
                     <%= @fajr_end %>
                   </p>
                 </div>
               </div>
               <div
-                class="salah-calander-row cursor-pointer rounded border p-4 md:p-6 mt-4 grid grid-cols-4 font-semibold text-sm md:text-base">
-                <div class="salah-type flex items-center">
+                class="grid grid-cols-4 p-4 mt-4 text-sm font-semibold border rounded cursor-pointer salah-calander-row md:p-6 md:text-base">
+                <div class="flex items-center salah-type">
                   <p class="text-black text-opacity-80">
                   <h2>Zuhr</h2>
                   </p>
@@ -170,20 +154,20 @@
                     <%= @zuhr_start %>
                   </p>
                 </div>
-                <div class="ending-time text-right">
-                  <p class="text-black text-opacity-80 pr-8 text-center">
+                <div class="text-right ending-time">
+                  <p class="pr-8 text-center text-black text-opacity-80">
                     13:30
                   </p>
                 </div>
                 <div class="ending-time">
-                  <p class="text-black text-opacity-80 pr-3 text-end">
+                  <p class="pr-3 text-black text-opacity-80 text-end">
                     13:30
                   </p>
                 </div>
               </div>
               <div
-                class="salah-calander-row cursor-pointer rounded border p-4 md:p-6 mt-4 grid grid-cols-4 font-semibold text-sm md:text-base">
-                <div class="salah-type flex items-center">
+                class="grid grid-cols-4 p-4 mt-4 text-sm font-semibold border rounded cursor-pointer salah-calander-row md:p-6 md:text-base">
+                <div class="flex items-center salah-type">
                   <p class="text-black text-opacity-80">
                   <h2>Asr</h2>
                   </p>
@@ -193,20 +177,20 @@
                     <%= @asr_start %>
                   </p>
                 </div>
-                <div class="ending-time text-right">
-                  <p class="text-black text-opacity-80 pr-8 text-center">
+                <div class="text-right ending-time">
+                  <p class="pr-8 text-center text-black text-opacity-80">
                     <%= @asr_end %>
                   </p>
                 </div>
                 <div class="ending-time">
-                  <p class="text-black text-opacity-80 pr-3 text-end">
+                  <p class="pr-3 text-black text-opacity-80 text-end">
                     <%= @asr_end %>
                   </p>
                 </div>
               </div>
               <div
-                class="salah-calander-row cursor-pointer rounded border p-4 md:p-6 mt-4 grid grid-cols-4 font-semibold text-sm md:text-base">
-                <div class="salah-type flex items-center">
+                class="grid grid-cols-4 p-4 mt-4 text-sm font-semibold border rounded cursor-pointer salah-calander-row md:p-6 md:text-base">
+                <div class="flex items-center salah-type">
                   <p class="text-black text-opacity-80">
                   <h2>Maghrib</h2>
                   </p>
@@ -216,20 +200,20 @@
                     <%= @maghrib_start %>
                   </p>
                 </div>
-                <div class="ending-time text-right">
-                  <p class="text-black text-opacity-80 pr-8 text-center">
+                <div class="text-right ending-time">
+                  <p class="pr-8 text-center text-black text-opacity-80">
                     <%= @maghrib_end %>
                   </p>
                 </div>
                 <div class="ending-time">
-                  <p class="text-black text-opacity-80 pr-3 text-end">
+                  <p class="pr-3 text-black text-opacity-80 text-end">
                     <%= @maghrib_end %>
                   </p>
                 </div>
               </div>
               <div
-                class="salah-calander-row cursor-pointer rounded border p-4 md:p-6 mt-4 grid grid-cols-4 font-semibold text-sm md:text-base">
-                <div class="salah-type flex items-center">
+                class="grid grid-cols-4 p-4 mt-4 text-sm font-semibold border rounded cursor-pointer salah-calander-row md:p-6 md:text-base">
+                <div class="flex items-center salah-type">
                   <p class="text-black text-opacity-80">
                   <h2>Isha</h2>
                   </p>
@@ -239,13 +223,13 @@
                     <%= @isha_start %>
                   </p>
                 </div>
-                <div class="ending-time text-right">
-                  <p class="text-black text-opacity-80 pr-8 text-center">
+                <div class="text-right ending-time">
+                  <p class="pr-8 text-center text-black text-opacity-80">
                     <%= @isha_end %>
                   </p>
                 </div>
                 <div class="ending-time">
-                  <p class="text-black text-opacity-80 pr-3 text-end">
+                  <p class="pr-3 text-black text-opacity-80 text-end">
                     <%= @isha_end %>
                   </p>
                 </div>
@@ -255,9 +239,9 @@
         </div>
       </div>
 
-      <div class="download mt-8 rounded p-4 border">
+      <div class="p-4 mt-8 border rounded download">
         <a data-turbo="false" href="<%= prayer_timetable_path %>"
-          class="bg-primary rounded text-white py-4 px-8 w-full inline-block" download>
+          class="inline-block w-full px-8 py-4 text-white rounded bg-primary" download>
           Download Ramadhan Timetable
         </a>
       </div>
@@ -265,28 +249,28 @@
   </section>
 
   <!-- symbols cards section -->
-  <section class="symbols-section mt-8 md:mt-16 lg:mt-24" id="about-us">
-    <div class="container mx-auto p-3 md:p-0">
-      <div class="main-heading md:w-1/2 md:mx-auto text-center">
-        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-black text-opacity-80">About Us</h2>
-        <p class="text-sm md:text-base text-black text-opacity-70 mt-4">We are a registered charity established by the
+  <section class="mt-8 symbols-section md:mt-16 lg:mt-24" id="about-us">
+    <div class="container p-3 mx-auto md:p-0">
+      <div class="text-center main-heading md:w-1/2 md:mx-auto">
+        <h2 class="text-xl font-bold text-black md:text-2xl lg:text-3xl text-opacity-80">About Us</h2>
+        <p class="mt-4 text-sm text-black md:text-base text-opacity-70">We are a registered charity established by the
           Muslim community of Huddersfield. Our Vision is to promote sound Islamic faith & practice to unlock our
           Human potential through provision of education & welfare initiatives.</p>
       </div>
       <!-- Mobile and tablet view -->
       <div class="symbols-mobile-section">
-        <div class="grid-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 mt-10 md:mt-20">
+        <div class="grid grid-cols-1 gap-5 mt-10 grid-wrapper md:grid-cols-2 lg:grid-cols-3 md:gap-10 md:mt-20">
           <% symbols_data.each do |symbol| %>
             <div
               class="card symbol-card p-6 text-center flex justify-center items-center flex-col gap-5 bg-[#F0F4F7] rounded cursor-pointer md:hover:bg-primary md:hover:scale-105 hover:text-white transition-all">
-              <div class="img-wrapper h-16 w-16">
+              <div class="w-16 h-16 img-wrapper">
                 <%= image_tag(symbol[:icon], alt: symbol[:alt], loading: "lazy" , class: "h-full w-full object-contain"
                   ) %>
               </div>
-              <h4 class="font-semibold text-lg text-black text-opacity-80">
+              <h4 class="text-lg font-semibold text-black text-opacity-80">
                 <%= symbol[:subHeading] %>
               </h4>
-              <p class="text-black text-opacity-70 text-sm md:text-base">
+              <p class="text-sm text-black text-opacity-70 md:text-base">
                 <%= symbol[:description] %>
               </p>
             </div>
@@ -295,35 +279,35 @@
       </div>
       <!-- Desktop view -->
       <div class="symbols-desktop-section">
-        <div class="grid-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 mt-10 md:mt-20">
+        <div class="grid grid-cols-1 gap-5 mt-10 grid-wrapper md:grid-cols-2 lg:grid-cols-3 md:gap-10 md:mt-20">
           <% symbols_data.take(3).each do |symbol| %>
             <div
               class="card symbol-card p-6 text-center flex justify-center items-center flex-col gap-5 bg-[#F0F4F7] rounded cursor-pointer md:hover:bg-primary md:hover:scale-105 hover:text-white transition-all">
-              <div class="img-wrapper h-16 w-16">
+              <div class="w-16 h-16 img-wrapper">
                 <%= image_tag(symbol[:icon], alt: symbol[:alt], loading: "lazy" , class: "h-full w-full object-contain"
                   ) %>
               </div>
-              <h4 class="font-semibold text-lg text-black text-opacity-80">
+              <h4 class="text-lg font-semibold text-black text-opacity-80">
                 <%= symbol[:subHeading] %>
               </h4>
-              <p class="text-black text-opacity-70 text-sm md:text-base">
+              <p class="text-sm text-black text-opacity-70 md:text-base">
                 <%= symbol[:description] %>
               </p>
             </div>
             <% end %>
         </div>
-        <div class="grid-wrapper md:flex gap-5 justify-center mt-5 md:mt-10">
+        <div class="justify-center gap-5 mt-5 grid-wrapper md:flex md:mt-10">
           <% symbols_data.drop(3).each do |symbol| %>
             <div
               class="card md:w-[400px] md:h-[255px] md:first:mr-5 first:mb-5 md:first:mb-0 symbol-card p-6 text-center flex justify-center items-center flex-col gap-5 bg-[#F0F4F7] rounded cursor-pointer md:hover:bg-primary md:hover:scale-105 hover:text-white transition-all">
-              <div class="img-wrapper h-16 w-16">
+              <div class="w-16 h-16 img-wrapper">
                 <%= image_tag(symbol[:icon], alt: symbol[:alt], loading: "lazy" , class: "h-full w-full object-contain"
                   ) %>
               </div>
-              <h4 class="font-semibold text-lg text-black text-opacity-80">
+              <h4 class="text-lg font-semibold text-black text-opacity-80">
                 <%= symbol[:subHeading] %>
               </h4>
-              <p class="text-black text-opacity-70 text-sm md:text-base">
+              <p class="text-sm text-black text-opacity-70 md:text-base">
                 <%= symbol[:description] %>
               </p>
             </div>
@@ -334,26 +318,26 @@
   </section>
 
   <!-- events section -->
-  <section class="events-section mt-12 md:mt-16 lg:mt-24">
-    <div class="container mx-auto p-3 md:p-0">
+  <section class="mt-12 events-section md:mt-16 lg:mt-24">
+    <div class="container p-3 mx-auto md:p-0">
       <div class="mb-4 md:mb-8">
-        <h2 class="text-lg md:text-2xl lg:text-3xl font-bold text-black text-opacity-80">Upcoming Events</h2>
+        <h2 class="text-lg font-bold text-black md:text-2xl lg:text-3xl text-opacity-80">Upcoming Events</h2>
       </div>
 
-      <div class="flex md:flex-row flex-col-reverse gap-8 events-tabs">
+      <div class="flex flex-col-reverse gap-8 md:flex-row events-tabs">
         <div class="tab-panels-container md:1/2 lg:w-8/12">
 
           <% event_tab_panel.each do |e| %>
             <div id="<%= e[:id] %>" class="flex-1 border rounded p-3 md:px-5 md:py-8 tab-panel md:h-[295px]">
-              <div class="event-detail lg:flex flex-wrap">
+              <div class="flex-wrap event-detail lg:flex">
                 <div class="event-description lg:w-1/2 md:py-3 lg:py-0">
-                  <h4 class="text-base md:text-xl font-bold mt-4 text-black text-opacity-80 md:mt-0">
+                  <h4 class="mt-4 text-base font-bold text-black md:text-xl text-opacity-80 md:mt-0">
                     <%= e[:title] %>
                   </h4>
-                  <p class="mt-4 text-black text-opacity-70 text-sm md:text-base">
+                  <p class="mt-4 text-sm text-black text-opacity-70 md:text-base">
                     <%= e[:date_time] %>
                   </p>
-                  <p class="mt-4 text-black text-opacity-70 font-light text-sm md:text-base">
+                  <p class="mt-4 text-sm font-light text-black text-opacity-70 md:text-base">
                     <%= e[:description] %>
                   </p>
                 </div>
@@ -362,21 +346,21 @@
             <% end %>
         </div>
 
-        <div class="lg:w-4/12 mt-8 md:mt-0">
+        <div class="mt-8 lg:w-4/12 md:mt-0">
           <% event_tab_button.each do |e| %>
-            <div id="<%= e[:id] %>" class="border cursor-pointer rounded p-3 md:p-6 lg:p-3 mt-8 tab-button">
+            <div id="<%= e[:id] %>" class="p-3 mt-8 border rounded cursor-pointer md:p-6 lg:p-3 tab-button">
               <div class="flex gap-5">
                 <div
                   class="rounded bg-[#F0F4F7] py-2 px-4 text-black text-opacity-70 text-xs md:text-sm self-start date-time">
                   <span class="whitespace-nowrap date">
                     <%= e[:date] %>
                   </span>
-                  <p class="text-xs md:text-sm text-black text-opacity-70">
+                  <p class="text-xs text-black md:text-sm text-opacity-70">
                     <%= e[:day] %>
                   </p>
                 </div>
                 <div>
-                  <h4 class="text-base lg:text-lg font-bold text-black text-opacity-80">
+                  <h4 class="text-base font-bold text-black lg:text-lg text-opacity-80">
                     <%= e[:title] %>
                   </h4>
                   <p class="text-sm text-black text-opacity-70 tab-button-description">
@@ -392,26 +376,26 @@
   </section>
 
   <!-- mixlr podcast section -->
-  <section class="mixlr mt-10 md:mt-16">
-    <div class="container mx-auto p-3 md:p-0">
-      <h4 class="text-black text-opacity-80 text-lg font-semibold">To listen to our MIXLR broadcasts, Please click play
+  <section class="mt-10 mixlr md:mt-16">
+    <div class="container p-3 mx-auto md:p-0">
+      <h4 class="text-lg font-semibold text-black text-opacity-80">To listen to our MIXLR broadcasts, Please click play
         below</h4>
       <div class="my-4 h-[400px] md:h-[500px]">
         <iframe class="w-full h-full" src="https://edenfoundation.mixlr.com" frameborder="0"></iframe>
       </div>
-      <p class="text-black text-opacity-80 font-light">If you are having an issues then <a
+      <p class="font-light text-black text-opacity-80">If you are having an issues then <a
           href="http://mixlr.com/the-eden-foundation" class="underline text-primary">click
           here to listen via the Mixlr website</a></p>
     </div>
   </section>
 
   <!-- namaz calender section on desktop -->
-  <section id="prayer-timetable-desktop" class="namaz-calender-section mt-12 md:mt-20 lg:mt-24 hidden md:block">
-    <div class="container mx-auto p-3 md:p-0">
+  <section id="prayer-timetable-desktop" class="hidden mt-12 namaz-calender-section md:mt-20 lg:mt-24 md:block">
+    <div class="container p-3 mx-auto md:p-0">
       <div class="text-center">
-        <h2 class="text-center md:text-2xl lg:text-3xl text-black text-opacity-80 font-bold">
+        <h2 class="font-bold text-center text-black md:text-2xl lg:text-3xl text-opacity-80">
           TEF Daily Prayer Times</h2>
-        <h6 class="md:text-lg font-bold text-black text-opacity-70 text-center mt-4">
+        <h6 class="mt-4 font-bold text-center text-black md:text-lg text-opacity-70">
           <%= Time.now.strftime("%A %B %d, %Y") %>
             <span class="text-primary">
               (<%= @hijri_current_date %>)
@@ -419,32 +403,32 @@
         </h6>
       </div>
 
-      <div class="md:flex gap-8 mt-8 md:mt-16">
+      <div class="gap-8 mt-8 md:flex md:mt-16">
         <div class="md:w-[1000px] md-flex mx-auto">
           <div class="mt-5">
-            <div class="rounded border p-4 md:p-6">
-              <div class="rounded p-4 bg-primary">
-                <div class="flex justify-between items-center">
-                  <div class="flex gap-3 items-center">
-                    <div class="bg-white h-5 w-5 rounded-full flex justify-center items-center">
-                      <span class="bg-primary h-2 w-2 rounded-full inline-block"></span>
+            <div class="p-4 border rounded md:p-6">
+              <div class="p-4 rounded bg-primary">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="flex items-center justify-center w-5 h-5 bg-white rounded-full">
+                      <span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
                     </div>
-                    <p class="md:text-lg font-semibold text-white">Suhur End</p>
+                    <p class="font-semibold text-white md:text-lg">Suhur End</p>
                   </div>
-                  <p class="md:text-lg font-semibold text-white">
+                  <p class="font-semibold text-white md:text-lg">
                     <%= @suhur_end %>
                   </p>
                 </div>
               </div>
-              <div class="rounded p-4 bg-primary mt-4">
-                <div class="flex justify-between items-center">
-                  <div class="flex gap-3 items-center">
-                    <div class="bg-white h-5 w-5 rounded-full flex justify-center items-center">
-                      <span class="bg-primary h-2 w-2 rounded-full inline-block"></span>
+              <div class="p-4 mt-4 rounded bg-primary">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="flex items-center justify-center w-5 h-5 bg-white rounded-full">
+                      <span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
                     </div>
-                    <p class="md:text-lg font-semibold text-white">Sun Rise</p>
+                    <p class="font-semibold text-white md:text-lg">Sun Rise</p>
                   </div>
-                  <p class="md:text-lg font-semibold text-white">
+                  <p class="font-semibold text-white md:text-lg">
                     <%= @sunrise %>
                   </p>
                 </div>
@@ -452,9 +436,9 @@
             </div>
           </div>
 
-          <div class="rounded border p-4 md:p-6 mt-5">
+          <div class="p-4 mt-5 border rounded md:p-6">
             <div
-              class="salah-heading flex justify-between items-center text-primary font-semibold cursor-pointer rounded border p-2 md:px-6">
+              class="flex items-center justify-between p-2 font-semibold border rounded cursor-pointer salah-heading text-primary md:px-6">
               <p class="text-start">SALAH</p>
               <p class="text-center">START</p>
               <div class="text-center">
@@ -468,8 +452,8 @@
             </div>
             <div class="namaz-timings-wrapper">
               <div
-                class="salah-calander-row cursor-pointer rounded border p-4 md:p-6 mt-4 grid grid-cols-4 font-semibold text-sm md:text-base">
-                <div class="salah-type flex items-center">
+                class="grid grid-cols-4 p-4 mt-4 text-sm font-semibold border rounded cursor-pointer salah-calander-row md:p-6 md:text-base">
+                <div class="flex items-center salah-type">
                   <p class="text-black text-opacity-80">
                   <h2>Fajr Start</h2>
                   </p>
@@ -479,20 +463,20 @@
                     <%= @fajr_start %>
                   </p>
                 </div>
-                <div class="ending-time text-right">
-                  <p class="text-black text-opacity-80 pr-5 text-center">
+                <div class="text-right ending-time">
+                  <p class="pr-5 text-center text-black text-opacity-80">
                     <%= @fajr_end %>
                   </p>
                 </div>
                 <div class="ending-time">
-                  <p class="text-black text-opacity-80 pr-8 text-end">
+                  <p class="pr-8 text-black text-opacity-80 text-end">
                     <%= @fajr_end %>
                   </p>
                 </div>
               </div>
               <div
-                class="salah-calander-row cursor-pointer rounded border p-4 md:p-6 mt-4 grid grid-cols-4 font-semibold text-sm md:text-base">
-                <div class="salah-type flex items-center">
+                class="grid grid-cols-4 p-4 mt-4 text-sm font-semibold border rounded cursor-pointer salah-calander-row md:p-6 md:text-base">
+                <div class="flex items-center salah-type">
                   <p class="text-black text-opacity-80">
                   <h2>Zuhr</h2>
                   </p>
@@ -502,20 +486,20 @@
                     <%= @zuhr_start %>
                   </p>
                 </div>
-                <div class="ending-time text-right">
-                  <p class="text-black text-opacity-80 pr-5  text-center">
+                <div class="text-right ending-time">
+                  <p class="pr-5 text-center text-black text-opacity-80">
                     13:30
                   </p>
                 </div>
                 <div class="ending-time">
-                  <p class="text-black text-opacity-80 pr-8 text-end">
+                  <p class="pr-8 text-black text-opacity-80 text-end">
                     13:30
                   </p>
                 </div>
               </div>
               <div
-                class="salah-calander-row cursor-pointer rounded border p-4 md:p-6 mt-4 grid grid-cols-4 font-semibold text-sm md:text-base">
-                <div class="salah-type flex items-center">
+                class="grid grid-cols-4 p-4 mt-4 text-sm font-semibold border rounded cursor-pointer salah-calander-row md:p-6 md:text-base">
+                <div class="flex items-center salah-type">
                   <p class="text-black text-opacity-80">
                   <h2>Asr</h2>
                   </p>
@@ -525,21 +509,21 @@
                     <%= @asr_start %>
                   </p>
                 </div>
-                <div class="ending-time text-right">
-                  <p class="text-black text-opacity-80 pr-5  text-center">
+                <div class="text-right ending-time">
+                  <p class="pr-5 text-center text-black text-opacity-80">
                     <%= @asr_end %>
                   </p>
                 </div>
                 <div class="ending-time">
-                  <p class="text-black text-opacity-80 pr-8 text-end">
+                  <p class="pr-8 text-black text-opacity-80 text-end">
                     <%= @asr_end %>
                   </p>
                 </div>
               </div>
 
               <div
-                class="salah-calander-row cursor-pointer rounded border p-4 md:p-6 mt-4 grid grid-cols-4 font-semibold text-sm md:text-base">
-                <div class="salah-type flex items-center">
+                class="grid grid-cols-4 p-4 mt-4 text-sm font-semibold border rounded cursor-pointer salah-calander-row md:p-6 md:text-base">
+                <div class="flex items-center salah-type">
                   <p class="text-black text-opacity-80">
                   <h2>Maghrib</h2>
                   </p>
@@ -549,20 +533,20 @@
                     <%= @maghrib_start %>
                   </p>
                 </div>
-                <div class="ending-time text-right">
-                  <p class="text-black text-opacity-80 pr-5  text-center">
+                <div class="text-right ending-time">
+                  <p class="pr-5 text-center text-black text-opacity-80">
                     <%= @maghrib_end %>
                   </p>
                 </div>
                 <div class="ending-time">
-                  <p class="text-black text-opacity-80 pr-8 text-end">
+                  <p class="pr-8 text-black text-opacity-80 text-end">
                     <%= @maghrib_end %>
                   </p>
                 </div>
               </div>
               <div
-                class="salah-calander-row cursor-pointer rounded border p-4 md:p-6 mt-4 grid grid-cols-4 font-semibold text-sm md:text-base">
-                <div class="salah-type flex items-center">
+                class="grid grid-cols-4 p-4 mt-4 text-sm font-semibold border rounded cursor-pointer salah-calander-row md:p-6 md:text-base">
+                <div class="flex items-center salah-type">
                   <p class="text-black text-opacity-80">
                   <h2>Isha</h2>
                   </p>
@@ -572,22 +556,22 @@
                     <%= @isha_start %>
                   </p>
                 </div>
-                <div class="ending-time text-right">
-                  <p class="text-black text-opacity-80 pr-5  text-center">
+                <div class="text-right ending-time">
+                  <p class="pr-5 text-center text-black text-opacity-80">
                     <%= @isha_end %>
                   </p>
                 </div>
                 <div class="ending-time">
-                  <p class="text-black text-opacity-80 pr-8 text-end">
+                  <p class="pr-8 text-black text-opacity-80 text-end">
                     <%= @isha_end %>
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="download mt-8 rounded p-4 border">
+          <div class="p-4 mt-8 border rounded download">
             <a data-turbo="false" href="<%= prayer_timetable_path %>"
-              class="bg-primary rounded text-white py-4 px-8 w-full inline-block text-center">
+              class="inline-block w-full px-8 py-4 text-center text-white rounded bg-primary">
               Download Ramadhan Timetable
             </a>
           </div>

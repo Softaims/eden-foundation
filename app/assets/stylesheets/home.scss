@@ -238,6 +238,21 @@ body {
   // background-size: cover;
 }
 
+.poster-5-desktop {
+  background-image: url(Honeybee.jpg);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.poster-6-desktop {
+  background-image: url(clever.jpeg);
+  height: 400px;
+  background-repeat: no-repeat;
+  // background-size: cover;
+}
+
 @media (max-width: 525px) {
   html,
   body {
