@@ -19,5 +19,5 @@ jobs:
         uses: idoberko2/dokku-deploy-github-action@v1
         with:
             ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-            dokku-host: '54.221.64.170'
+            dokku-host: '144.126.156.254'
             app-name: 'eden-foundation'
